@@ -14,16 +14,16 @@ public class Division {
         return "0";
     }
 
-    public static String divide(String A, String B) {
-        A = HexToBin(A);
-        B = HexToBin(B);
+    public static String divide(String num1, String num2) {
+        num1 = HexToBin(num1);
+        num2 = HexToBin(num2);
         StringBuilder res = new StringBuilder();
         StringBuilder remainder = new StringBuilder();
-        for(int i = 0; i < A.length(); i++){
-            remainder.append(A.charAt(i));
-            if(compare(remainder.toString(), B) != -1){
+        for(int i = 0; i < num1.length(); i++){
+            remainder.append(num1.charAt(i));
+            if(compare(remainder.toString(), num2) != -1){
                 res.append("1");
-                remainder = new StringBuilder(RemoveLeadingZeroes(subtract_(remainder.toString(), B)));
+                remainder = new StringBuilder(RemoveLeadingZeroes(subtract_(remainder.toString(), num2)));
             }
             else{
                 res.append("0");

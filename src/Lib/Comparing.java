@@ -9,12 +9,11 @@ public class Comparing {
         } else if (size_a < size_b) {
             return -1;
         } else {
-            int len = a.length();
             int i = 0;
-            while (i != len && a.charAt(i) == b.charAt(i)) {
+            while (i != size_a && a.charAt(i) == b.charAt(i)) {
                 i += 1;
             }
-            if (i == len) {
+            if (i == size_a) {
                 return 0;
             } else {
                 if (a.charAt(i) > b.charAt(i)) {

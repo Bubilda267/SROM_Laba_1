@@ -2,7 +2,7 @@ package Lib;
 
 import java.math.BigInteger;
 
-class Converter {
+public class Converter {
     static String HexToBin(String str) {
         return new BigInteger(str, 16).toString(2);
     }
