@@ -5,14 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da077617-95bd-4dee-900c-1809f53b886d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Lib/Exponentiation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Lib/Mod/AddMod.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Lib/Mod/BarrettReduction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LibTest2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Lib/Comparing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lib/Comparing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lib/Addition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lib/Addition.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Lib/Converter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lib/Converter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Lib/Division.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lib/Division.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lib/Exponentiation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lib/Exponentiation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Lib/Multiplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lib/Multiplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Lib/ShiftBitsToHigh.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lib/ShiftBitsToHigh.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LibTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LibTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lib/Subtraction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lib/Subtraction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LibTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LibTest1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,12 +60,13 @@
     &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/sasha/IdeaProjects/SROM_Laba_1&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.3054137&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.LibTest">
+  <component name="RunManager" selected="JUnit.LibTest1">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="SROM_Laba_1" />
@@ -69,40 +74,40 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LibTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LibTest1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SROM_Laba_1" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="LibTest" />
+      <option name="MAIN_CLASS_NAME" value="LibTest1" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LibTest.addition1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LibTest1.MulAndDiv2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SROM_Laba_1" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="LibTest" />
-      <option name="METHOD_NAME" value="addition1" />
+      <option name="MAIN_CLASS_NAME" value="LibTest1" />
+      <option name="METHOD_NAME" value="MulAndDiv2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LibTest.exponentiation1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LibTest1.MulAndDiv4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SROM_Laba_1" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="LibTest" />
-      <option name="METHOD_NAME" value="exponentiation1" />
+      <option name="MAIN_CLASS_NAME" value="LibTest1" />
+      <option name="METHOD_NAME" value="MulAndDiv4" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LibTest.exponentiation2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LibTest2.AddModCase1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SROM_Laba_1" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="LibTest" />
-      <option name="METHOD_NAME" value="exponentiation2" />
+      <option name="MAIN_CLASS_NAME" value="LibTest2" />
+      <option name="METHOD_NAME" value="AddModCase1" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -110,11 +115,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.LibTest" />
-        <item itemvalue="JUnit.LibTest.exponentiation2" />
-        <item itemvalue="JUnit.LibTest.exponentiation1" />
+        <item itemvalue="JUnit.LibTest1" />
+        <item itemvalue="JUnit.LibTest1.MulAndDiv2" />
+        <item itemvalue="JUnit.LibTest1.MulAndDiv4" />
+        <item itemvalue="JUnit.LibTest2.AddModCase1" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.LibTest.addition1" />
       </list>
     </recent_temporary>
   </component>
@@ -155,7 +160,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665326974398</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added exponentiation and tests">
+      <created>1665416699393</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1665416699393</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -174,6 +186,7 @@
     <MESSAGE value="added addition and comparing" />
     <MESSAGE value="fixed addition and some tests" />
     <MESSAGE value="added subtraction, multiplication and division" />
-    <option name="LAST_COMMIT_MESSAGE" value="added subtraction, multiplication and division" />
+    <MESSAGE value="added exponentiation and tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="added exponentiation and tests" />
   </component>
 </project>
