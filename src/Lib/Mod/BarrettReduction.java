@@ -1,26 +1,59 @@
 package Lib.Mod;
 
-import java.math.BigInteger;
-
+import static Lib.RemoveLeadingZeroes.removeLeadingZeroes;
 import static Lib.Comparing.compare;
 import static Lib.Division.divide;
-import static Lib.Exponentiation.exponentiate;
 import static Lib.Multiplication.multiply;
 import static Lib.Subtraction.subtract;
 import static Lib.Converter.*;
-
+import static Lib.ShiftBitsToHigh.*;
 public class BarrettReduction {
-//    public static String barrett(String x, String n) throws Exception {
-//        int k = new BigInteger(n).bitLength();
-//        String u = divide(exponentiate("2", multiply("2", DecToHex(Integer.toString(k)), 10)), n);
-//        String q =  x.substring(0, x.length() - k + 1);
-//        q = multiply(q, u, 16);
-//        q = q.substring(0, q.length() - k - 1);
-//        String r = subtract(x, multiply(q, n));
-//
-//        while (compare(r,n) >= 0){
-//            r = subtract(r,n);
-//        }
-//        return r;
-//    }
+    public static String barrett(String num, String mod, int NumeralSystemInput, int NumeralSystemOutput) throws Exception {
+
+        switch (NumeralSystemInput) {
+            case 2 -> {
+                num = BinToHex(num);
+                mod = BinToHex(mod);
+            }
+            case 10 -> {
+                num = DecToHex(num);
+                mod = DecToHex(mod);
+            }
+            case 16 -> {
+
+            }
+            default -> throw new Exception("Wrong Numeral System");
+        }
+
+        int k = mod.length();
+
+        String u = U(k,mod);
+        String q = num.substring(0, num.length() - k + 1);
+        q = multiply(q, u, 16, 16);
+        q = q.substring(0, q.length() - k - 1);
+        String res = subtract(num, multiply(q, mod, 16, 16), 16, 16);
+        if (res.equals("negative number")) {
+            throw new Exception("Something wrong");
+        }
+        while (compare(res, mod) >= 0) {
+            res = subtract(res, mod, 16, 16);
+        }
+        switch (NumeralSystemOutput) {
+            case 2 -> {
+                return HexToBin(res);
+            }
+            case 10 -> {
+                return HexToDec(res);
+            }
+            case 16 -> {
+                return res;
+            }
+            default -> throw new Exception("Wrong Numeral System");
+        }
+    }
+
+    private static String U(int k, String mod) throws Exception {
+        String u_ = shiftBitsToHigh("1", 2*k);
+        return removeLeadingZeroes(divide(u_, mod, 16, 16));
+    }
 }

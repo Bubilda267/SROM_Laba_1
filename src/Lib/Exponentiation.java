@@ -7,7 +7,6 @@ public class Exponentiation {
     public static String exponentiate(String num, String power, int NumeralSystemInput, int NumeralSystemOutput) throws Exception {
         switch (NumeralSystemInput) {
             case 2 -> {
-                break;
             }
             case 10 -> {
                 num = DecToBin(num);

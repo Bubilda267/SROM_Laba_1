@@ -2,7 +2,8 @@ package Lib;
 
 import static Lib.Addition.add;
 import static Lib.Converter.*;
-import static Lib.ShiftBitsToHigh.ShiftBits;
+import static Lib.RemoveLeadingZeroes.removeLeadingZeroes;
+import static Lib.ShiftBitsToHigh.shiftBitsToHigh;
 
 public class Multiplication {
 
@@ -38,19 +39,19 @@ public class Multiplication {
         String res = "0";
         for (int i = len; i > 0; i--) {
             if (num2.charAt(i - 1) != '0') {
-                String temp = ShiftBits(num1, len - i);
+                String temp = shiftBitsToHigh(num1, len - i);
                 res = (add(temp, res, 2, 2));
             }
         }
         switch (NumeralSystemOutput) {
             case 2 -> {
-                return res;
+                return removeLeadingZeroes(res);
             }
             case 10 -> {
-                return BinToDec(res);
+                return BinToDec(removeLeadingZeroes(res));
             }
             case 16 -> {
-                return BinToHex(res);
+                return BinToHex(removeLeadingZeroes(res));
             }
             default -> throw new Exception("Wrong Numeral System");
         }
