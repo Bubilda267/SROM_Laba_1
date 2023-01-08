@@ -24,7 +24,8 @@ public class Division {
         StringBuilder remainder = new StringBuilder();
         for(int i = 0; i < num1.length(); i++){
             remainder.append(num1.charAt(i));
-            if(compare(remainder.toString(), num2) != -1){
+            remainder = new StringBuilder(removeLeadingZeroes(remainder.toString()));
+            if(compare(remainder.toString(), num2) != -1){ // remainder >= num2
                 res.append("1");
                 remainder = new StringBuilder(removeLeadingZeroes(subtract(remainder.toString(), num2, 2, 2)));
             }
@@ -34,7 +35,7 @@ public class Division {
         }
         switch (NumeralSystemOutput) {
             case 2 -> {
-                return res.toString();
+                return removeLeadingZeroes(res.toString());
             }
             case 10 -> {
                 return BinToDec(res.toString());

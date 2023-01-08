@@ -182,8 +182,9 @@ public class LibTest1 {
     void division5() throws Exception {
         String a = "1000110";
         String b = "10";
-        String expected = "101101";
-        assertEquals(divide(a,b,2,2), expected.toLowerCase());
+        String expected = "100011";
+        assertEquals(
+                divide(a,b,2,2), expected.toLowerCase());
     }
 
     @Test

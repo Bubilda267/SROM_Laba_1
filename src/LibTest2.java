@@ -1,5 +1,7 @@
 import org.junit.jupiter.api.Test;
 
+import static Lib.Evklid.Gcd.gcd;
+import static Lib.Evklid.Lcm.lcm;
 import static Lib.Mod.AddMod.addMod;
 import static Lib.Mod.BarrettReduction.barrett;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -47,5 +49,31 @@ public class LibTest2 {
         String mod = "d4d2110984907b5625309d956521bab4157b8b1ece04043249a3d379ac112e5b9af44e721e148d88a942744cf56a06b92d28a0db950fe4ced2b41a0bd38bce7d0";
         String expected = "be1055cf5de38f2a588c2c9a79a75011058c320a7b661c6ce1c36c7d870758307e5d2cf07d9b6e8d529779b6b2910dd17b6766a7efee215a98cac300f2827db";
         assertEquals(barrett(num,mod,16,16), expected);
+    }
+
+    @Test
+    void Gcd1() throws Exception {
+        String a = "144";
+        String b = "76";
+        String expected = "4";
+        assertEquals(gcd(a,b,10,10), expected);
+    }
+
+    @Test
+    void Gcd2() throws Exception {
+        String a = "A5241614B561ADDF76C4BB6565FF76A918C843F0458B3EF457BCD9022D78798A29462EC99C74";
+        String b = "FE3E36A529210C2AE99B90FC08A26E351FE23AF375AD6BA288EE030B70DF0CE1CDF1E8B75BA56494D";
+        String expected = "f";
+        assertEquals(gcd(a,b,16,16), expected);
+    }
+
+    @Test
+    void Lcm1() throws Exception {
+        String a = "A5241614B561ADDF76C4BB6565FF76A918C843F0458B3EF457BCD9022D78798A29462EC99C74";
+        //21024880038323428979441297022746959510985646221550480118806966626066455619973977316203797620
+        String b = "FE3E36A529210C2AE99B90FC08A26E351FE23AF375AD6BA288EE030B70DF0CE1CDF1E8B75BA56494D";
+        //33941237344415298024073584229038146418814299985735161880243749039570982684309697898873332872661325
+        String expected = "AEF0FFE45185E967554BB5D60E1BEC440C1A7FF5970BF1E5D6A4B3B0016DF1677E264110314FFCBF4825E749B8604AD38AF3DD255AD6681834F72478498079FBBF0E8B2CEB17783D241FE4BF8ADC";
+        assertEquals(lcm(a,b,16,16), expected.toLowerCase());
     }
 }

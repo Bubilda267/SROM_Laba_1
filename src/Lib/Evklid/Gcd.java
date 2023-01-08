@@ -7,7 +7,7 @@ import static Lib.Comparing.compare;
 import static Lib.Subtraction.subtract;
 
 public class Gcd {
-    static public String gcd(String num1, String num2, int NumeralSystemInput, int NumeralSystemOutput) throws Exception {
+    public static String gcd(String num1, String num2, int NumeralSystemInput, int NumeralSystemOutput) throws Exception {
         switch (NumeralSystemInput) {
             case 2 -> {
                 num1 = BinToDec(num1);
