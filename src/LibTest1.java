@@ -178,6 +178,13 @@ public class LibTest1 {
         String expected = "0";
         assertEquals(divide(a,b,16,16), expected.toLowerCase());
     }
+    @Test
+    void division5() throws Exception {
+        String a = "1000110";
+        String b = "10";
+        String expected = "101101";
+        assertEquals(divide(a,b,2,2), expected.toLowerCase());
+    }
 
     @Test
     void MulAndDiv1() throws Exception {

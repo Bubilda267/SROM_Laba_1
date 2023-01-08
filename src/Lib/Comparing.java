@@ -1,6 +1,9 @@
 package Lib;
 
 public class Comparing {
+    // 1 - if a > b
+    // 0 - if a == b
+    // -1 - if a < b
     public static int compare(String a, String b) {
         int size_a = a.length();
         int size_b = b.length();
